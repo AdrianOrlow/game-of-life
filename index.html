@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./main.js"></script>
+    <title>Gra w życie</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Gra w życie</h1>
+        <div class="header__actions">
+            <button
+                class="header__button header__button--grey"
+                id="clearButton"
+            >Wyczyść</button>
+            <button
+                class="header__button header__button--darkgrey"
+                id="breakButton"
+                hidden
+            >Pauza</button>
+            <button
+                class="header__button header__button--green"
+                id="startButton"
+            >Start</button>
+        </div>
+    </header>
+    <main class="main">
+        <section class="grid" id="grid"></section>
+    </main>
+</body>
+</html>

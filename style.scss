@@ -1,0 +1,87 @@
+$gridHeight: 25rem;
+$cellBorderWidth: 1px;
+
+$black: #2c3e50;
+$dark-grey: #95a5a6;
+$grey: #dadada;
+$green: #27ae60;
+$white: #fafafa;
+
+html, body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    $padding: 1rem;
+    padding: $padding;
+    width: calc(100% - $padding * 2);
+
+    &__title {
+        font-weight: 600;
+        margin: 0;
+        font-size: 1.5rem;
+        color: $black;
+    }
+
+    &__button {
+        border: 0;
+        padding: .5rem 1rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        &--grey {
+            background: $grey;
+        }
+
+        &--darkgrey {
+            background: $dark-grey;
+            color: $white;
+        }
+
+        &--green {
+            background: $green;
+            color: $white;
+        }
+
+        &:hover {
+            filter: brightness(95%);
+        }
+    }
+}
+
+.grid {
+    height: $gridHeight;
+
+    &__row {
+        width: 100%;
+        display: flex;
+        border-bottom: $cellBorderWidth solid $black;
+
+        &:first-child {
+            border-top: $cellBorderWidth solid $black;
+        }
+    }
+
+    &__cell {
+        border-right: $cellBorderWidth solid $black;
+        height: 1rem;
+        width: 1rem;
+        cursor: pointer;
+
+        &:first-child {
+            border-left: $cellBorderWidth solid $black;
+        }
+
+        &:hover {
+            background: rgba($black, 0.125);
+        }
+
+        &.alive {
+            background: rgba($black, 0.75);
+        }
+    }
+}
